@@ -5,12 +5,13 @@
 	--accent1-color: #161925;
     --accent2-color: #78C5D7;
     --background-color: #333333;
+    --background-page: #f2f2f2;
 	--heading-font: 'Work Sans', sans-serif;
 	--paragraph-font: 'Poppins', sans-serif;
 }
 
 html {
-	background-color: var(--primary-color);
+	background-color: var(--background-page);
 	font-family: var(--paragraph-font);
 }
 
@@ -78,6 +79,10 @@ p {
 
 .accent2 {
 	background-color: var(--accent2-color);
+}
+
+.backgroundPage {
+	background-color: var(--background-page);
 }
 
 nav {
