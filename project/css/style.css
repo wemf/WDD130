@@ -85,7 +85,22 @@ nav ul li a {
     padding: 1.2rem;
 }
 
+
+nav a:link,
+nav a:visited {
+	color: var(--secondary-color);
+}
+
+nav a:hover {
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+
 .social-links img {
     width: 3rem;
     box-shadow: 2px 2px 2px var(--background-color);
+}
+
+section, footer {
+    padding: 1rem;
 }
