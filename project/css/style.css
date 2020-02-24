@@ -69,9 +69,18 @@ nav ul {
     padding: 0;
 }
 
+.banner-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
 .banner-box img{
     width: 100%;
     height: auto;
+    grid-area: 1 / 1 / 2 / 3;
 }
 
 nav ul li {
@@ -109,17 +118,14 @@ footer {
 }
 
 .call-to-action {
+    grid-area: 1 / 1 / 2 / 2;
     background-color: #F2F2F2;
     opacity: 0.8;
-    padding: 10px;
-    text-align: center;
     height: 150px;
     width: 150px;
-    top: 14rem;
-    left: 7rem;
-    position: absolute;
     padding: 2rem 4rem;
-    text-align: center;
+    justify-self: center;
+    align-self: center;
 }
 
 
@@ -185,5 +191,8 @@ footer {
 @media screen and (max-width: 550px) {
     .home-grid {
       display: block;
+    }
+    .call-to-action{
+        display: none;
     }
 }
