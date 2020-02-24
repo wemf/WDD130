@@ -56,6 +56,11 @@ header img {
     letter-spacing: 1.5pt;
 }
 
+h2 {
+    border-top: 5px double;
+    border-bottom: 5px double;
+}
+
 nav {
     background-color: var(--background-color);
     margin: 0;
@@ -129,7 +134,7 @@ footer {
 }
 
 
-.call-to-action a {
+.call-to-action button {
     line-height: 2rem;
     background-color: var(--secondary-color);
     font-size: 1.2rem;
@@ -138,7 +143,7 @@ footer {
     padding: .3rem;
 }
 
-.call-to-action a:hover {
+.call-to-action button:hover {
     border: #161925 2px solid;
 }
 
