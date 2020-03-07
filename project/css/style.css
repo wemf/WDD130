@@ -106,7 +106,8 @@ nav a:visited {
 	color: var(--secondary-color);
 }
 
-nav a:hover {
+nav a:hover,
+nav .active {
 	color: var(--secondary-color);
 	background-color: var(--primary-color);
 }
