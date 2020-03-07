@@ -42,7 +42,7 @@ header img {
     flex-direction: column;
 }
 
-.heading i {
+.heading h6 {
     font-family: 'Work Sans', Helvetica, sans-serif;
     font-size: 2rem;
     color: var(--primary-color);
