@@ -199,8 +199,9 @@ footer {
     align-items: center;
 }
 
-.title-box h3 {
-    margin: .3rem;
+.title-box h2 {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .post-card  {
@@ -258,7 +259,11 @@ footer {
     max-width: 100%;
 }
 
-.post-title-alt h2, .post-content-alt p{
+.post-title h3, .post-title-alt h3 {
+    font-size: 1.5rem;
+}
+
+.post-title-alt h3, .post-content-alt p{
     padding-left: 1rem;
 }
 /* Media queries */
@@ -273,7 +278,7 @@ footer {
     .post-card, .post-card-alt {
         display: block;
     }
-    .post-title h2 {
+    .post-title h3 {
         padding: 2rem;
         text-align: center;
     }
