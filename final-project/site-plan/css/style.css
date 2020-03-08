@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Poppins&display=swap');
+:root {
+	--primary-color: #231942;
+	--secondary-color: #59D9D3;
+	--accent1-color: #33032F;
+    --accent2-color: #5479A2;
+    --background-color: #170312;
+    --background-page: #f2f2f2;
+	--heading-font: 'Nunito', sans-serif;
+	--paragraph-font: 'Poppins', sans-serif;
+}
+
+html {
+	background-color: var(--background-page);
+	font-family: var(--paragraph-font);
+}
+
+body {
+	max-width: 900px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 1em
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--heading-font);
+	color: var(--background-color);
+}
+
+header {
+	padding: 1em;
+	text-align: center;
+	color: var(--accent2-color);
+	background-color: transparent;
+}
+
+header>h1 {
+	color: var(--background-color);
+}
+
+p {
+	font-family: var(--paragraph-font);
+	color: var(--background-color);
+	padding: 1em
+}
+
+.colors {
+	width: 100%;
+	min-width: 350px;
+	margin: auto;
+	text-align: center
+}
+
+.colors th {
+	background-color: #999;
+}
+
+.colors td {
+	width: 25%;
+    height: 3em;
+    color: #ffffff;
+}
+
+.primary {
+	background-color: var(--primary-color);
+}
+
+.secondary {
+	background-color: var(--secondary-color);
+}
+
+.accent1 {
+	background-color: var(--accent1-color);
+}
+
+.accent2 {
+	background-color: var(--accent2-color);
+}
+
+.backgroundPage {
+	background-color: var(--background-page);
+}
+
+nav {
+	background-color: #333333;
+	line-height: 3em;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+nav>ul {
+	list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+	padding: 1em;
+    min-width: 70px;
+    text-decoration: none;
+}
+
+nav a:link,
+nav a:visited {
+	color: var(--secondary-color);
+}
+
+nav a:hover {
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+}
+
+figure {
+	display: flex;
+    justify-content: center;
+}
