@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Form fun</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-mobile">
+                <div class="column is-half is-offset-one-quarter form-container">
+                    <h1 class="title has-text-centered">This is a Fun Form</h1>
+                    <h2 class="subtitle has-text-centered">
+                        A simple form using different <strong>input types</strong>, for the w10 assigment.
+                    </h2>
+                    <p>
+                        I used Bulma a css framework to learn something additional, it might have some issues with css validation, because of modern css.
+                    </p>
+                    <div id="feedback" class="notification is-success">
+                        Check your form, something is wrong with your inputs values
+                    </div>
+                    <form method="GET" action="#!">
+                        <div class="field">
+                            <label class="label" for="user_name">Name</label>
+                            <div class="control">
+                                <input class="input" id="user_name" name="user_name" type="text" placeholder="John Doe"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="email">Email</label>
+                            <div class="control">
+                                <input class="input" type="email" id="email" name="email" placeholder="john.doe@example.com"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="subject">Subject</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select id="subject" name="subject">
+                                        <option value="">-- Select an option --</option>
+                                        <option value="1">Contact you</option>
+                                        <option value="2">Ask a question</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" for="message">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" id="message" name="message" placeholder="Type your full message"></textarea>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <input type="checkbox" id="terms" name="terms" value="true">
+                                <label for="terms" class="checkbox">
+                                    I agree to the <a href="#">terms and conditions</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <label class="radio">
+                                <input type="radio" name="question" value="yes">
+                                Yes
+                                </label>
+                                <label class="radio">
+                                <input type="radio" name="question" value="no">
+                                No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <button type="submit" class="button is-fullwidth is-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>                     
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form element so we can read what was entered in it.
+        const formElement = document.forms[0];
+        
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+          // stop the form from doing the default action
+          e.preventDefault();
+          // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+          feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+          // make the feedback element visible.
+          feedbackElement.style.display = "block";
+        });
+    </script>
+</body>
+</html>
