@@ -1,11 +1,65 @@
-/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #231942; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
-body {
-    font-size: 14px;
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Poppins&display=swap');
+:root {
+    --primary-color: #351c75;
+	--secondary-color: #59D9D3;
+	--accent1-color: #33032F;
+    --accent2-color: #5479A2;
+    --background-color: #170312;
+    --background-page: #f2f2f2;
+    --dark: #333333;
+    --light: #ffffff;
+	--heading-font: 'Nunito Sans', sans-serif;
+	--paragraph-font: 'Poppins', sans-serif;
 }
+html {
+    background-color: var(--background-page);
+	font-family: var(--paragraph-font);
+    font-size: 14px;
+    color: var(--dark);
+}
+body{ margin:0;} 
+canvas{ display: block; } 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+h1 {
+    font-size: 4rem;
+}
+.banner-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 600px;
+}
+#particles-js{ 
+    width: 100%; 
+    height: 100%; 
+    background-color: var(--background-page); 
+    background-image: url(""); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 50% 50%; 
+    grid-area: 1 / 1 / 2 / 3;
+} 
+.banner-hero canvas {
+    max-height: 600px;
+}
+.banner-line {
+    width: 1.2rem;
+    margin-top: 5%;
+    height: 45%;
+    background-color: var(--primary-color);
+}
+.banner-title {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5rem;
+    width: 70%;
+}
+
 .container-menu{
     display: flex;
     justify-content: space-between;
-    border-bottom: #000022 solid 1px;
     padding: 10px 40px;
 }
 .logo-container img{
