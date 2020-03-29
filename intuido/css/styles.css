@@ -45,6 +45,15 @@ h3 {
     font-size: 1.5rem;
 }
 
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--primary-color);
+}
+
 .banner-hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -90,38 +99,6 @@ h3 {
     max-width: 120px;
 }
 
-.menu-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.menu-links ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.menu-links a {
-    margin-left: 1rem;
-}
-
-.menu-link {
-    color: var(--dark);
-    text-decoration: none;
-}
-
-.menu-link:hover, .menu-link:active {
-    color: var(--primary-color);
-}
-
-.menu-cta {
-    display: none;
-}
-
-
 .stop-scrolling { 
     height: 100%; 
     overflow: hidden; 
@@ -142,15 +119,6 @@ h3 {
 	position: fixed;
 	top: 10px;
 	left: 10px;
-}
-
-.intuido-nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100vh;
-	transform: translateX(-100%);
-	transition: transform .3s ease; 
 }
 
 .intuido-nav.visible {
@@ -220,7 +188,7 @@ h3 {
 
 .intuido-list ul {
 	list-style-type: none;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 
@@ -329,6 +297,14 @@ footer p {
     .intuido-nav-btn {
         display: none;
     }
+    .menu-links, .menu-links .intuido-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .intuido-list li{
+        margin-right: 1rem;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -346,6 +322,14 @@ footer p {
     }
     .intuido-nav-btn {
         display: none;
+    }
+    .menu-links, .menu-links .intuido-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .intuido-list li{
+        margin-right: 1rem;
     }
 }
 
@@ -370,7 +354,14 @@ footer p {
     .intuido-nav-btn {
         display: none;
     }
-    
+    .menu-links, .menu-links .intuido-list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    .intuido-list li{
+        margin-right: 1rem;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -382,6 +373,22 @@ footer p {
         width: 280px;
         height: 280px;
         margin-bottom: 5%;
+    }
+    .intuido-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out; 
+    }
+    .intuido-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-cta{
+        margin-top: 2rem;
+        margin-right: 1rem;
     }
 }
 
@@ -399,8 +406,20 @@ footer p {
         font-size: 2rem;
         max-width: 70%;
     }
+    .intuido-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out; 
+    }
+    .intuido-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-cta{
+        margin-top: 2rem;
+        margin-right: 1rem;
+    }
 }
-/** 
- * 
- * end Card about
- */

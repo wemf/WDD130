@@ -38,9 +38,9 @@
 					<img src="images/logo-intuido.png" alt="Intuido logo">
 				</a>
 			</div>
-			<div class="intuido-nav intuido-nav-dark">
-				<div class="intuido-nav intuido-nav-primary">
-					<div class="intuido-nav intuido-nav-light">
+			<div id="intuido-nav-dark" class="intuido-nav">
+				<div id="intuido-nav-primary" class="intuido-nav">
+					<div id="intuido-nav-light" class="intuido-nav">
 						<button class="intuido-nav-btn intuido-close-btn"><i class="fas fa-times"></i></button>
 						<div class="menu-links">
 							<ul class="intuido-list">
@@ -156,13 +156,19 @@ const intuido_close_btn = document.querySelector('.intuido-close-btn');
 const intuido_nav = document.querySelectorAll('.intuido-nav');
 
 intuido_open_btn.addEventListener('click', () => {
+	document.getElementById('intuido-nav-dark').classList.add('intuido-nav-dark')
+	document.getElementById('intuido-nav-primary').classList.add('intuido-nav-primary')
+	document.getElementById('intuido-nav-light').classList.add('intuido-nav-light')
 	intuido_nav.forEach(nav_el => { nav_el.classList.add('visible') });
-    document.body.classList.add("stop-scrolling"); 
+    document.body.classList.add('stop-scrolling'); 
 });
 
 intuido_close_btn.addEventListener('click', () => {
 	intuido_nav.forEach(nav_el => { nav_el.classList.remove('visible') });
-    document.body.classList.remove("stop-scrolling"); 
+	document.getElementById('intuido-nav-dark').classList.remove('intuido-nav-dark')
+	document.getElementById('intuido-nav-primary').classList.remove('intuido-nav-primary')
+	document.getElementById('intuido-nav-light').classList.remove('intuido-nav-light')
+    document.body.classList.remove('stop-scrolling'); 
 });
 particlesJS("particles-js", {"particles":{"number":{"value":150,"density":{"enable":true,"value_area":800}},"color":{"value":"#391075"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":96.20472365193136,"color":"#391075","opacity":0.4,"width":1},"move":{"enable":true,"speed":5,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":119.88011988011988,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
 </script>
