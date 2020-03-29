@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,800|Poppins&display=swap');
-
+*{margin:0; padding:0;}
 :root {
     --primary-color: #351c75;
 	--secondary-color: #59D9D3;
@@ -191,6 +191,18 @@ a:hover, a:active {
 	padding-left: 10px;
 }
 
+.sticky-menu{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.sticky + main {
+    padding-top: 102px;
+}
 
 .btn {
     text-decoration: none;

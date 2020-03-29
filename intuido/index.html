@@ -28,8 +28,8 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-	<header style="background: white;">
-		<nav class="container-menu">
+	<heade>
+		<nav id="container-menu" class="container-menu">
 			<button class="intuido-nav-btn intuido-open-btn">
 				<i class="fas fa-bars"></i>
 			</button>
@@ -151,6 +151,19 @@
 <!-- particles.js -->
 <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 <script>
+window.onscroll = () => {stickyMenu()};
+
+const header = document.getElementById("container-menu");
+const sticky = header.offsetTop;
+
+const stickyMenu = () => {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky-menu");
+  } else {
+    header.classList.remove("sticky-menu");
+  }
+}
+
 const intuido_open_btn = document.querySelector('.intuido-open-btn');
 const intuido_close_btn = document.querySelector('.intuido-close-btn');
 const intuido_nav = document.querySelectorAll('.intuido-nav');
