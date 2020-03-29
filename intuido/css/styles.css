@@ -157,29 +157,29 @@ h3 {
 	transform: translateX(0);
 }
 
-.intuido-nav-black {
-	background-color: rgb(34, 31, 31);
+.intuido-nav-dark {
+	background-color: var(--dark);
 	width: 95%;
 	max-width: 480px;
 	min-width: 320px;
 	transition-delay: .4s;
 }
 
-.intuido-nav-black.visible {
+.intuido-nav-dark.visible {
 	transition-delay: 0s;
 }
 
-.intuido-nav-red {
-	background-color: #351c75;
+.intuido-nav-primary {
+	background-color: var(--primary-color);
 	transition-delay: .2s; 
 	width: 90%;
 }
 
-.intuido-nav-red.visible {
+.intuido-nav-primary.visible {
 	transition-delay: .2s;
 }
 
-.intuido-nav-white {
+.intuido-nav-light {
 	background-color: #fff;
 	padding: 40px;
 	position: relative;
@@ -187,7 +187,7 @@ h3 {
 	width: 60%;
 }
 
-.intuido-nav-white.visible {
+.intuido-nav-light.visible {
 	transition-delay: .4s;
 }
 
