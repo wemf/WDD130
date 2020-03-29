@@ -5,8 +5,9 @@
 <title>INTUIDO - Web Development</title>
 <meta name="description" content="We are a Web Development Software Company">
 <meta name="author" content="INTUIDO" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
@@ -27,19 +28,31 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-	<header>
+	<header style="background: white;">
 		<nav class="container-menu">
+			<button class="intuido-nav-btn intuido-open-btn">
+				<i class="fas fa-bars"></i>
+			</button>
 			<div class="logo-container">
 				<a href="#!">
 					<img src="images/logo-intuido.png" alt="Intuido logo">
 				</a>
 			</div>
-			<div class="menu-links">
-				<ul>
-					<li class="active"><a class="menu-link" href="#">About us</a></li>
-					<li><a class="menu-link" href="#">Blog</a></li>
-				</ul>
-				<a class="btn btn-primary" href="#">Contact us</a>
+			<div class="intuido-nav intuido-nav-black">
+				<div class="intuido-nav intuido-nav-red">
+					<div class="intuido-nav intuido-nav-white">
+						<button class="intuido-nav-btn intuido-close-btn"><i class="fas fa-times"></i></button>
+						<div class="menu-links">
+							<ul class="intuido-list">
+								<li class="active"><a class="menu-link" href="#">About us</a></li>
+								<li><a class="menu-link" href="#">Blog</a></li>
+							</ul>
+							<div class="menu-cta">
+								<a class="btn btn-primary" href="#">Contact us</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</nav>
 		<div class="banner-hero">
@@ -138,6 +151,19 @@
 <!-- particles.js -->
 <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 <script>
+const intuido_open_btn = document.querySelector('.intuido-open-btn');
+const intuido_close_btn = document.querySelector('.intuido-close-btn');
+const intuido_nav = document.querySelectorAll('.intuido-nav');
+
+intuido_open_btn.addEventListener('click', () => {
+	intuido_nav.forEach(nav_el => { nav_el.classList.add('visible') });
+    document.body.classList.add("stop-scrolling"); 
+});
+
+intuido_close_btn.addEventListener('click', () => {
+	intuido_nav.forEach(nav_el => { nav_el.classList.remove('visible') });
+    document.body.classList.remove("stop-scrolling"); 
+});
 particlesJS("particles-js", {"particles":{"number":{"value":150,"density":{"enable":true,"value_area":800}},"color":{"value":"#391075"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":96.20472365193136,"color":"#391075","opacity":0.4,"width":1},"move":{"enable":true,"speed":5,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":119.88011988011988,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
 </script>
 </body>
