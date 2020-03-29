@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Card component</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+        }
+        span {
+            font-size: .9rem;
+            color: #ccc;
+        }
+        .card {
+            width: 320px;
+            box-shadow: 1px 1px 4px 1px #888;
+            border-radius: 3px;
+            background-color: white;
+            overflow: hidden;  
+        }
+        .cardContent{
+            padding: 1rem;
+            margin: 0;
+        }
+        .cardControls{
+            display: flex;
+            padding: 0 1rem 1rem;
+            justify-content: space-between;
+        }
+        .buttonGroup{
+            display: flex;
+        }
+        .viewButton {
+            color: #888;
+            padding: .3rem;
+            border: #777 solid 1px;
+            border-radius: 3px;
+            border-right: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .editButton {
+            color: #888;
+            padding: .3rem;
+            border: #777 solid 1px;
+            border-radius: 3px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article class="card">
+            <img src="https://picsum.photos/320/240"/>
+            <footer>
+                <p class="cardContent">
+                    This is a wider card with supporting text
+                    below as a natural lead-in to additional
+                    content. This content is a little bit longer.
+                </p>
+                <div class="cardControls">
+                    <div class="buttonGroup">
+                        <button type="button" class="viewButton">
+                            View
+                        </button>
+                        <button type="button" class="editButton">
+                            Edit
+                        </button>
+                    </div>
+                    <span>9 mins</span>
+                </div>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
