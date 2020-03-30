@@ -215,6 +215,17 @@ a:hover, a:active {
     color: var(--primary-color);
 }
 
+.btn-secondary {
+    color: var(--light);
+    background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--light);
+    color: var(--secondary-color);
+}
+
+
 .btn-dark {
     color: var(--light);
 }
