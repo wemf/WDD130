@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,800|Poppins&display=swap');
-*{margin:0; padding:0;}
 :root {
     --primary-color: #351c75;
 	--secondary-color: #59D9D3;
@@ -42,7 +41,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 a {
@@ -85,9 +84,9 @@ a:hover, a:active {
 .banner-title {
     grid-area: 1 / 1 / 2 / 3;
     display: flex;
-    margin-top: 5%;
-    margin-left: 5rem;
+    margin: auto;
     width: 70%;
+    max-width: 1250px;
 }
 
 .container-menu{
@@ -117,8 +116,8 @@ a:hover, a:active {
 
 .intuido-open-btn {
 	position: fixed;
-	top: 10px;
-	left: 10px;
+	top: 25px;
+	left: 30px;
 }
 
 .intuido-nav.visible {
@@ -179,13 +178,6 @@ a:hover, a:active {
 	margin: 20px 0;
 }
 
-.intuido-list li a {
-	color: rgb(34, 31, 31);
-	font-size: 14px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
 .intuido-list ul {
 	list-style-type: none;
 	padding-left: 10px;
@@ -210,16 +202,26 @@ a:hover, a:active {
     padding: .5rem;
     color: var(--dark);
     box-shadow: 4px 4px 0 0 var(--dark);
+    max-width: fit-content;
 }
 
 .btn-primary {
-    color: white;
+    color: var(--light);
     background: var(--primary-color);
 }
 
 .btn-primary:hover {
-    background: white;
+    background: var(--light);
     color: var(--primary-color);
+}
+
+.btn-dark {
+    color: var(--light);
+}
+
+.btn-dark:hover {
+    background: var(--primary-color);
+    color: var(--light);
 }
 
 section{
@@ -293,6 +295,23 @@ footer p {
     margin-bottom: 5%;
 }
 
+.container-services h2{
+    display: flex;
+    flex-direction: column;
+}
+.container-services h2:after{
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    content: "";
+    width: 4rem;
+    height: .5rem;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 1281px) {
     .cards-about {
         flex-direction: row;
@@ -305,6 +324,8 @@ footer p {
         display: flex;
         justify-content: space-between;
         padding: 10px 40px;
+        max-width: 1250px;
+        margin: auto;
     }
     .intuido-nav-btn {
         display: none;
@@ -316,6 +337,12 @@ footer p {
     }
     .intuido-list li{
         margin-right: 1rem;
+    }
+    .container-services .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 4rem;
     }
 }
 
@@ -342,6 +369,12 @@ footer p {
     }
     .intuido-list li{
         margin-right: 1rem;
+    }
+    .container-services .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 4rem;
     }
 }
 
@@ -373,6 +406,12 @@ footer p {
     }
     .intuido-list li{
         margin-right: 1rem;
+    }
+    .container-services .services {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 4rem;
     }
 }
 

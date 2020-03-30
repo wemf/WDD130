@@ -28,33 +28,35 @@
 <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-	<heade>
-		<nav id="container-menu" class="container-menu">
-			<button class="intuido-nav-btn intuido-open-btn">
-				<i class="fas fa-bars"></i>
-			</button>
-			<div class="logo-container">
-				<a href="#!">
-					<img src="images/logo-intuido.png" alt="Intuido logo">
-				</a>
-			</div>
-			<div id="intuido-nav-dark" class="intuido-nav">
-				<div id="intuido-nav-primary" class="intuido-nav">
-					<div id="intuido-nav-light" class="intuido-nav">
-						<button class="intuido-nav-btn intuido-close-btn"><i class="fas fa-times"></i></button>
-						<div class="menu-links">
-							<ul class="intuido-list">
-								<li class="active"><a class="menu-link" href="#">About us</a></li>
-								<li><a class="menu-link" href="#">Blog</a></li>
-							</ul>
-							<div class="menu-cta">
-								<a class="btn btn-primary" href="#">Contact us</a>
+	<header>
+		<div id="sticky">
+			<nav id="container-menu" class="container-menu">
+				<button type="button" class="intuido-nav-btn intuido-open-btn" aria-label="Menu">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="logo-container">
+					<a href="#!">
+						<img src="images/logo-intuido.png" alt="Intuido logo">
+					</a>
+				</div>
+				<div id="intuido-nav-dark" class="intuido-nav">
+					<div id="intuido-nav-primary" class="intuido-nav">
+						<div id="intuido-nav-light" class="intuido-nav">
+							<button type="button" class="intuido-nav-btn intuido-close-btn" aria-label="Menu"><i class="fas fa-times"></i></button>
+							<div class="menu-links">
+								<ul class="intuido-list">
+									<li class="active"><a class="menu-link" href="#">About us</a></li>
+									<li><a class="menu-link" href="#">Blog</a></li>
+								</ul>
+								<div class="menu-cta">
+									<a class="btn btn-primary" href="#">Contact us</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
+		</div>
 		<div class="banner-hero">
 			<div id="particles-js">
 			</div>
@@ -91,32 +93,32 @@
 					<div class="service">
 						<h3>CMS Web Development</h3>
 						<p>We create modern solutions for your website, blog or landing-page with JAMstack, to give you the most powerful, ease of use, and effortless website management experience.</p>
-						<a href="#!">Request quote</a>
+						<a class="btn btn-dark" href="#!">Request quote</a>
 					</div>
 					<div class="service">
 						<h3>eCommerce Development</h3>
 						<p>We have an expertise team to develop your e-commerce platform. Whether you choose an open-source software, or building it from scratch we wild guarantee you the best product.</p>
-						<a href="#!">Request quote</a>
+						<a class="btn btn-dark" href="#!">Request quote</a>
 					</div>
 					<div class="service">
 						<h3>Third party API & integration</h3>
 						<p>We connect software through API (REST, GraphQL, SOAP) that you already have, and build any bridge you might need to automate your tasks.</p>
-						<a href="#!">Request quote</a>
+						<a class="btn btn-dark" href="#!">Request quote</a>
 					</div>
 					<div class="service">
 						<h3>Enterprise Web Development</h3>
 						<p>We develop enterprise large-scale solutions like ERP, CRM, for B2B and B2C markets.</p>
-						<a href="#!">Request quote</a>
+						<a class="btn btn-dark" href="#!">Request quote</a>
 					</div>
 					<div class="service">
 						<h3>Mobile Development</h3>
 						<p>We build cross-platform hybrid mobile apps (Android and iOS) with React Native, with cost effective benefits and fast development work process.</p>
-						<a href="#!">Request quote</a>
+						<a class="btn btn-dark" href="#!">Request quote</a>
 					</div>
 					<div class="service">
 						<h3>Serverless, cloud services and scale</h3>
 						<p>With develop serverless apps using cloud services like AWS, Azure, Google Cloud, Firebase and so on. Get freedom from server management, and meet the high availability and speed of this new paradigm.</p>
-						<a href="#!">Request quote</a>
+						<a class="btn btn-dark" href="#!">Request quote</a>
 					</div>
 				</div>
 			</section>
@@ -153,7 +155,7 @@
 <script>
 window.onscroll = () => {stickyMenu()};
 
-const header = document.getElementById("container-menu");
+const header = document.getElementById("sticky");
 const sticky = header.offsetTop;
 
 const stickyMenu = () => {
