@@ -53,6 +53,16 @@ a:hover, a:active {
     color: var(--primary-color);
 }
 
+a.light {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+a.light:hover, a.light:active {
+    color: var(--light);
+    text-decoration: underline;
+}
+
 .banner-hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -339,6 +349,17 @@ footer p {
     color: var(--dark);
     padding: 0;
     justify-self: center;
+    width: 280px;
+}
+
+.post .post-image {
+    display: flex;
+    justify-content: center;
+}
+
+.post .post-content{
+    display: flex;
+    flex-direction: column;
 }
 
 .card .post-content{
