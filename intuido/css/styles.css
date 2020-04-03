@@ -63,6 +63,10 @@ a.light:hover, a.light:active {
     text-decoration: underline;
 }
 
+.light{
+    color: var(--light);
+}
+
 .banner-hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -77,6 +81,10 @@ a.light:hover, a.light:active {
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: 50% 50%; 
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.banner-image {
     grid-area: 1 / 1 / 2 / 3;
 }
 
@@ -97,6 +105,19 @@ a.light:hover, a.light:active {
     margin: auto;
     width: 70%;
     max-width: 1250px;
+}
+
+h1.line{
+    display: flex;
+    flex-direction: column;
+}
+
+h1.line:after{
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+    content: "";
+    width: 4rem;
+    height: .5rem;
 }
 
 .container-menu{
@@ -226,13 +247,13 @@ a.light:hover, a.light:active {
 }
 
 .btn-secondary {
-    color: var(--light);
+    color: var(--dark);
     background: var(--secondary-color);
 }
 
 .btn-secondary:hover {
     background: var(--light);
-    color: var(--secondary-color);
+    color: var(--dark);
 }
 
 
