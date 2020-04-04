@@ -413,13 +413,11 @@ footer p {
     z-index: -10;
 }
 
-.banner-title-about {
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+.banner-hero-about-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1250px;
+    padding: 4rem;
 }
 
 .our-vision {
