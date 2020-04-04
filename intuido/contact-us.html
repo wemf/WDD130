@@ -71,7 +71,7 @@
                     <h2>Ready to realise your product vision?</h2>
                     <p>Write us and we contact you in the next 24 hours.</p>
                 </div>
-                <form class="cta-form" action="#!" method="POST">
+                <form id="cta-form" class="cta-form" action="#!" method="POST">
                     <div class="form-field full-name">
                         <label for="full_name">Your full name</label>
                         <input id="full_name" name="full_name"/>
@@ -163,6 +163,12 @@ intuido_close_btn.addEventListener('click', () => {
 	document.getElementById('intuido-nav-light').classList.remove('intuido-nav-light')
     document.body.classList.remove('stop-scrolling'); 
 });
+
+/* dummy form */
+document.getElementById('cta-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    alert('Thanks for contact us!');
+})
 </script>
 </body>
 </html>

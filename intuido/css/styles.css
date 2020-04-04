@@ -259,12 +259,17 @@ h1.line:after{
 }
 
 .btn {
+    outline: none;
     text-decoration: none;
     border: solid 2px var(--dark);
     padding: .5rem;
     color: var(--dark);
     box-shadow: 4px 4px 0 0 var(--dark);
     max-width: fit-content;
+}
+
+.btn:hover{
+    cursor: pointer;
 }
 
 .btn-primary {
