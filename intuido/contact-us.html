@@ -65,25 +65,30 @@
 		</div>
 	</header>
 	<main>
-		<div class="background-dark">
-			<section class="container-services">
-				<h2>Our vision</h2>
-				<div class="our-vision">
-					<div class="our-vision-content">
-						<p>Our vision is to deliver tangible and measurable value to our clients and this is the foundation of what we believe is different about us. Our attention to detail and quality is unmatched in the industry.</p>
-						<p>We are not just a development provider. We value the success of our clients as much as ours, sharing the risk of development, so that they can be brave in their adoption of new technologies.</p>
-					</div>
-					<div class="our-vision-image">
-						<img src="images/people-working.jpg" alt="people working"/>
-					</div>
-				</div>
-			</section>
-		</div>
 		<div class="background-primary">
 			<section class="container-cta">
-				<h2>Ready to realise your product vision?</h2>
-				<h4>Write us and we contact you in the next 24 hours.</h4>
-				<a class="btn btn-secondary" href="contact-us.html">Request quote</a>
+                <div class="cta-title">
+                    <h2>Ready to realise your product vision?</h2>
+                    <p>Write us and we contact you in the next 24 hours.</p>
+                </div>
+                <form class="cta-form" action="#!" method="POST">
+                    <div class="form-field full-name">
+                        <label for="full_name">Your full name</label>
+                        <input id="full_name" name="full_name"/>
+                    </div>
+                    <div class="form-field email">
+                        <label for="email">Your company email *</label>
+                        <input type="email" id="email" name="email" required/>
+                    </div>
+                    <div class="form-field message">
+                        <label for="message">Your project description or idea</label>
+                        <textarea id="message" name="message"></textarea>
+                        <div class="form-submit">
+                            <span>Your data are safe with us. We take your privacy seriously and we will never share your data with anyone. Read on our Privacy Policy to learn more.</span>
+                            <button type="submit" class="btn btn-secondary">Submit form</button>
+                        </div>
+                    </div>
+                </form>
 			</section>
 		</div>
 		<section class="container-blog">

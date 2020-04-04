@@ -21,6 +21,10 @@ html {
     box-sizing: inherit;
 }
 
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
 html {
     background-color: var(--background-page);
 	font-family: var(--paragraph-font);
@@ -34,6 +38,24 @@ body{
 
 canvas{ 
     display: block; 
+}
+
+input {
+    height: 2.5rem;
+}
+
+input, textarea {
+    padding: 5px 15px 2px;
+    border: 2px solid #000;
+    background-color: var(--light);
+    line-height: 1.5;
+    box-shadow: none;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+textarea {
+    height: 10rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -464,6 +486,46 @@ footer p {
     margin-bottom: 4rem;
 }
 
+.cta-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 4rem;
+    grid-row-gap: 3rem;
+}
+
+.form-field{
+    text-align: left;
+    line-height: 3rem;
+    font-size: 1.5rem;
+}
+
+.form-field.full-name{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.form-field.email{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.form-field.message {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.form-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.form-submit span {
+    font-size: .75rem;
+    width: 50%;
+    line-height: 1.4;
+}
+
+.form-submit .btn.btn-secondary {
+    font-size: 1.5rem;
+}
 @media (min-width: 1281px) {
     .cards-about {
         flex-direction: row;
@@ -613,7 +675,23 @@ footer p {
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
         gap: 4rem;
-    }    
+    }
+    .cta-form {
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .form-field.full-name{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .form-field.email{
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .form-field.message{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -650,5 +728,21 @@ footer p {
         grid-template-columns: 1fr;
         grid-template-rows: 2fr;
         gap: 4rem;
+    }
+
+    .cta-form {
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .form-field.full-name{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .form-field.email{
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .form-field.message{
+        grid-area: 3 / 1 / 4 / 3;
     }
 }
